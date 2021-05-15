@@ -1,6 +1,6 @@
 # The MIT License (MIT)
 
-Copyright (c) 2017-2021 Andreas Möller
+Copyright (c) 2021 Zerai Teclai
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the _Software_), to deal in the Software without restriction, including without limitation the
