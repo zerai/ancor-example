@@ -36,10 +36,9 @@ branches:
         # Note: User, app, and team restrictions are only available for organization-owned repositories.
         # Set to null to disable when using this configuration for a repository on a personal account.
 
-        apps: []
-        teams: []
-        users:
-          - "ergebnis-bot"
+        apps: null
+        teams: null
+        users: null
 
 # https://docs.github.com/en/rest/reference/issues#create-a-label
 # https://docs.github.com/en/rest/reference/issues#update-a-label
@@ -82,15 +81,15 @@ repository:
   archived: false
   default_branch: "main"
   delete_branch_on_merge: true
-  description: ":octocat: + :ledger: Provides a GitHub repository template for a PHP library, using GitHub actions."
+  description: ":octocat: + :ledger: Provides a ancor example."
   has_downloads: true
   has_issues: true
   has_pages: false
   has_projects: false
   has_wiki: false
-  name: "php-library-template"
+  name: "ancor-example"
   private: false
 
   # https://docs.github.com/en/rest/reference/repos#replace-all-repository-topics
 
-  topics: "php, library, template"
+  topics: "php, ancor"
