@@ -1,13 +1,13 @@
 {
-  "name": "ergebnis/php-library-template",
-  "type": "library",
-  "description": "Provides a GitHub repository template for a PHP library, using GitHub actions.",
-  "homepage": "https://github.com/ergebnis/php-library-template",
+  "name": "zerai/ancor-example",
+  "type": "project",
+  "description": "Provides an ancor example.",
+  "homepage": "https://github.com/zerai/ancor-example",
   "license": "MIT",
   "authors": [
     {
-      "name": "Andreas Möller",
-      "email": "am@localheinz.com"
+      "name": "Zerai Teclai",
+      "email": "teclaizerai@gmail.com.com"
     }
   ],
   "require": {
@@ -31,7 +31,7 @@
   },
   "config": {
     "platform": {
-      "php": "7.3.24"
+      "php": "7.4.18"
     },
     "preferred-install": "dist",
     "sort-packages": true
@@ -44,16 +44,18 @@
   },
   "autoload": {
     "psr-4": {
-      "Ergebnis\\Library\\": "src/"
+      "Ergebnis\\Library\\": "src/",
+      "TaskManagement\\": "task-management/src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Ergebnis\\Library\\Test\\": "test/"
+      "Ergebnis\\Library\\Test\\": "test/",
+      "TaskManagement\\Tests\\": "task-management/tests/"
     }
   },
   "support": {
-    "issues": "https://github.com/ergebnis/php-library-template/issues",
-    "source": "https://github.com/ergebnis/php-library-template"
+    "issues": "https://github.com/zerai/ancor-example/issues",
+    "source": "https://github.com/zerai/ancor-example"
   }
 }
