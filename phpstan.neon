@@ -11,5 +11,7 @@ parameters:
 	paths:
 		- src/
 		- test/
+		- task-management/src/
+		- task-management/tests/
 
 	tmpDir: .build/phpstan/
