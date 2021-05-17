@@ -11,7 +11,8 @@
     }
   ],
   "require": {
-    "php": "^7.4 || ^8.0"
+    "php": "^7.4 || ^8.0",
+    "ramsey/uuid": "^4.1"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.13.3",
@@ -24,6 +25,7 @@
     "phpstan/phpstan-strict-rules": "~0.12.9",
     "phpunit/phpunit": "~9.2.6",
     "psalm/plugin-phpunit": "~0.15.1",
+    "symplify/easy-coding-standard": "^9.3",
     "vimeo/psalm": "^4.6.2"
   },
   "config": {
@@ -41,13 +43,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Ergebnis\\Library\\": "src/",
+      "App\\": "src/",
       "TaskManagement\\": "task-management/src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Ergebnis\\Library\\Test\\": "test/",
+      "App\\Test\\": "test/",
       "TaskManagement\\Tests\\": "task-management/tests/"
     }
   },
