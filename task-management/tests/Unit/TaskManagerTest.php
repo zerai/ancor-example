@@ -10,6 +10,7 @@ use TaskManagement\Application\Domain\AssigneeId;
 use TaskManagement\Application\Domain\AssigneeService;
 use TaskManagement\Application\Domain\Email;
 use TaskManagement\Application\Domain\Name;
+use TaskManagement\Application\Domain\Task;
 use TaskManagement\Application\Domain\TaskRepository;
 use TaskManagement\Application\Domain\Title;
 use TaskManagement\Application\TaskManager;
@@ -77,7 +78,7 @@ class TaskManagerTest extends TestCase
             ->method('storeTask')
             ->will(
                 $this->returnCallback(
-                    function ($task): void {
+                    function (Task $task): void {
                         self::assertEquals('5b338480-b841-44ce-83d7-8db12cada4c4', $task->id()->__toString());
                         self::assertEquals(new Title('A title'), $task->title());
                     }

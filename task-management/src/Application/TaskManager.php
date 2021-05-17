@@ -33,7 +33,7 @@ final class TaskManager implements AssigningTasks
         $taskTitle = new Title($assignTaskRequest->taskTitle);
         $assignee = $this->assigneeService->getFromId($assignTaskRequest->assigneeId);
 
-        $task = new Task($taskId, $taskTitle);
+        $task = new Task($taskId, $taskTitle, $assignee);
 
         $this->repository->storeTask($task);
     }

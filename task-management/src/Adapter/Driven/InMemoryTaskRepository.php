@@ -9,6 +9,7 @@ use TaskManagement\Application\Domain\TaskRepository;
 
 class InMemoryTaskRepository implements TaskRepository
 {
+    /** @var array <string, Task> */
     private array $tasks = [];
 
     public function nextId(): TaskId
@@ -21,6 +22,10 @@ class InMemoryTaskRepository implements TaskRepository
         $this->tasks[$aTask->id()->toString()] = $aTask;
     }
 
+    /**
+     * @param TaskId $taskId
+     * @return Task
+     */
     public function withId(TaskId $taskId): Task
     {
         return $this->tasks[$taskId->toString()];
