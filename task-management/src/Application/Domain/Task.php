@@ -3,18 +3,24 @@
 
 namespace TaskManagement\Application\Domain;
 
-
 final class Task
 {
-    private string $id;
+    private TaskId $id;
+    private Title $title;
 
-    public function __construct(string $id)
+    public function __construct(TaskId $id, Title $title)
     {
         $this->id = $id;
+        $this->title = $title;
     }
 
-    public function id(): string
+    public function id(): TaskId
     {
         return $this->id;
+    }
+
+    public function title(): Title
+    {
+        return $this->title;
     }
 }
