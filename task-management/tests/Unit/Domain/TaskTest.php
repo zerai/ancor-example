@@ -37,7 +37,7 @@ final class TaskTest extends TestCase
     public function it_has_an_assegnee(): void
     {
         $sut = $this->createTask(self::UUID, 'A title', '', 'j.doe', 'jdoe@example.com');
-        
+
         self::assertEquals('j.doe', $sut->assignee()->name()->value());
         self::assertEquals('jdoe@example.com', $sut->assignee()->email()->value());
     }

@@ -22,7 +22,7 @@ class InMemoryTaskRepositoryTest extends TestCase
         $sut = new InMemoryTaskRepository();
         $result = $sut->nextId();
 
-        self::assertInstanceOf(TaskId::class, $result);
+        self::assertNotEmpty($result);
     }
 
     /** @test */

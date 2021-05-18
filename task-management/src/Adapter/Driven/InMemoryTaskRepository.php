@@ -9,7 +9,7 @@ use TaskManagement\Application\Domain\TaskRepository;
 
 class InMemoryTaskRepository implements TaskRepository
 {
-    /** @var array <string, Task> */
+    /** @var Task[] */
     private array $tasks = [];
 
     public function nextId(): TaskId
