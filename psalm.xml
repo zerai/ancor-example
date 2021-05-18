@@ -15,8 +15,8 @@
     </plugins>
 
     <projectFiles>
-        <directory name="src/" />
-        <directory name="test/" />
+        <directory name="task-management/src/" />
+        <directory name="task-management/tests/" />
         <ignoreFiles>
             <directory name="vendor/" />
         </ignoreFiles>

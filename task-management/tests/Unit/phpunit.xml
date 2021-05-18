@@ -24,7 +24,7 @@
 >
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true" processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">../../task-management/src/</directory>
+            <directory suffix=".php">../../src/</directory>
         </whitelist>
     </filter>
     <testsuites>
