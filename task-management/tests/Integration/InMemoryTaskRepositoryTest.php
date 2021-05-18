@@ -1,10 +1,9 @@
 <?php declare(strict_types=1);
-
-
-namespace TaskManagement\Tests\Unit\Domain;
+namespace TaskManagement\Tests\Integration;
 
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
+use TaskManagement\Adapter\Driven\InMemoryTaskRepository;
 use TaskManagement\Application\Domain\Assegnee;
 use TaskManagement\Application\Domain\AssigneeId;
 use TaskManagement\Application\Domain\Email;
@@ -13,33 +12,28 @@ use TaskManagement\Application\Domain\Task;
 use TaskManagement\Application\Domain\TaskId;
 use TaskManagement\Application\Domain\Title;
 
-final class TaskTest extends TestCase
+class InMemoryTaskRepositoryTest extends TestCase
 {
     public const UUID = '5b338480-b841-44ce-83d7-8db12cada4c4';
 
     /** @test */
-    public function it_can_be_created(): void
+    public function it_should_generate_new_identity(): void
     {
-        $sut = $this->createTask(self::UUID);
+        $sut = new InMemoryTaskRepository();
+        $result = $sut->nextId();
 
-        self::assertEquals(self::UUID, $sut->id()->toString());
+        self::assertNotEmpty($result);
     }
 
     /** @test */
-    public function it_has_a_title(): void
+    public function it_should_store_a_task(): void
     {
-        $sut = $this->createTask(self::UUID, 'A title');
+        $sut = new InMemoryTaskRepository();
+        $task = $this->createTask(self::UUID);
 
-        self::assertEquals('A title', $sut->title()->value());
-    }
+        $sut->storeTask($task);
 
-    /** @test */
-    public function it_has_an_assegnee(): void
-    {
-        $sut = $this->createTask(self::UUID, 'A title', '', 'j.doe', 'jdoe@example.com');
-
-        self::assertEquals('j.doe', $sut->assignee()->name()->value());
-        self::assertEquals('jdoe@example.com', $sut->assignee()->email()->value());
+        self::assertEquals($task, $sut->withId(TaskId::fromString(self::UUID)));
     }
 
     private function createTask(string $taskId = '', string $taskTitle = '', string $assigneeId = '', string $assigneeName = '', string $assigneeEmail = ''): Task
