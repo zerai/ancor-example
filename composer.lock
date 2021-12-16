@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef6e9a89ed4010c7cfcfbdb057c1d84e",
+    "content-hash": "cb9eff7d2a336b260fa0e1463c6a0f49",
     "packages": [
         {
             "name": "brick/math",
@@ -4965,16 +4965,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "v9.3.11",
+            "version": "10.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/easy-coding-standard.git",
-                "reference": "634da6abea9e7f9b4489d8bd313227c968c94d2c"
+                "reference": "6ded50e7aaec414f0e88d0c04959d88766aa0324"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/634da6abea9e7f9b4489d8bd313227c968c94d2c",
-                "reference": "634da6abea9e7f9b4489d8bd313227c968c94d2c",
+                "url": "https://api.github.com/repos/symplify/easy-coding-standard/zipball/6ded50e7aaec414f0e88d0c04959d88766aa0324",
+                "reference": "6ded50e7aaec414f0e88d0c04959d88766aa0324",
                 "shasum": ""
             },
             "require": {
@@ -4984,21 +4984,27 @@
                 "friendsofphp/php-cs-fixer": "<3.0",
                 "squizlabs/php_codesniffer": "<3.6"
             },
-            "replace": {
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "squizlabs/php_codesniffer": "^3.6"
-            },
             "bin": [
                 "bin/ecs"
             ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "9.5-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Prefixed scoped version of ECS package",
             "support": {
-                "source": "https://github.com/symplify/easy-coding-standard/tree/v9.3.11"
+                "source": "https://github.com/symplify/easy-coding-standard/tree/10.0.3"
             },
             "funding": [
                 {
@@ -5010,7 +5016,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-13T11:38:11+00:00"
+            "time": "2021-12-16T11:55:57+00:00"
         },
         {
             "name": "thecodingmachine/safe",
@@ -5422,5 +5428,5 @@
     "platform-overrides": {
         "php": "7.4.18"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
