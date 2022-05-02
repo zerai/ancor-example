@@ -27,7 +27,7 @@
     "phpunit/phpunit": "~9.2.6",
     "psalm/plugin-phpunit": "~0.15.1",
     "symplify/easy-coding-standard": "^9.3",
-    "vimeo/psalm": "^4.6.2"
+    "vimeo/psalm": "^4.23.0"
   },
   "config": {
     "platform": {
